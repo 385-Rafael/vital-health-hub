@@ -5,12 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vital Health Hub - HepatoBurn</title>
   <style>
-    body {
+    /* Reset básico */
+    * {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Header */
     header {
       background: url('https://www.hepatoburn.com/assets/hero-bg.jpg') no-repeat center center/cover;
       height: 100vh;
@@ -20,17 +32,22 @@
       align-items: center;
       text-align: center;
       color: white;
+      position: relative;
+      scroll-behavior: smooth;
     }
 
     header h1 {
       font-size: 3rem;
-      margin: 0;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease forwards;
     }
 
     header h2 {
       font-size: 1.5rem;
       font-weight: 400;
-      margin-top: 10px;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.3s;
     }
 
     .cta-btn {
@@ -40,13 +57,19 @@
       font-size: 1.2rem;
       border: none;
       border-radius: 5px;
-      margin-top: 20px;
       cursor: pointer;
-      text-decoration: none;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.6s;
+      transition: transform 0.3s;
     }
 
+    .cta-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Seções */
     .section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
@@ -70,47 +93,87 @@
 
     .product {
       margin-top: 40px;
+      max-width: 100%;
     }
 
+    /* Footer */
     footer {
       background: #f8f8f8;
       padding: 20px;
       text-align: center;
       font-size: 0.9rem;
     }
+
+    /* Menu fixo */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e63946;
+    }
+
+    /* Depoimentos */
+    .testimonials {
+      background: #f1f1f1;
+      padding: 60px 20px;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 20px auto;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* Animações */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsivo */
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header h2 {
+        font-size: 1.2rem;
+      }
+      .bullets {
+        font-size: 1rem;
+      }
+    }
+
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="#learn">Learn</a>
+    <a href="#product">Product</a>
+    <a href="#testimonials">Testimonials</a>
+  </nav>
+
   <header>
-    <h1>TRY HEPATOBURN</h1>
-    <h2>At Special Introductory Pricing!</h2>
-    <a class="cta-btn" href="https://0ce4fgnaml5r7wf8mnmpya6c2b.hop.clickbank.net/?&traffic_source=facebook&traffic_type=paid">
-      Watch Free Presentation
-    </a>
-  </header>
-
-  <section class="section">
-    <h3>What You'll Learn:</h3>
-    <ul class="bullets">
-      <li>✅ How liver health impacts stubborn fat</li>
-      <li>✅ Natural ways to boost your metabolism</li>
-      <li>✅ The secret method thousands use to transform their energy</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <img class="product" src="https://www.hepatoburn.com/assets/product-image.png" alt="HepatoBurn Bottles" width="400">
-    <div>
-      <a class="cta-btn" href="https://0ce4fgnaml5r7wf8mnmpya6c2b.hop.clickbank.net/?&traffic_source=facebook&traffic_type=paid">
-        Get HepatoBurn Now
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Vital Health Hub. All rights reserved.
-  </footer>
-
-</body>
-</html>
+    <h1>TRY HE
