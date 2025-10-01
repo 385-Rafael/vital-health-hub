@@ -103,6 +103,7 @@
       font-size: 2rem;
       margin-bottom: 40px;
       color: #ff4c5b;
+      text-align: center;
     }
 
     /* Cards de bullets */
@@ -142,11 +143,17 @@
     }
 
     /* Produto */
+    .product-section {
+      text-align: center;
+    }
+
     .product-section img {
-      max-width: 100%;
+      max-width: 350px;
+      width: 100%;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       transition: transform 0.3s;
+      margin-bottom: 20px;
     }
 
     .product-section img:hover {
@@ -163,15 +170,35 @@
       padding: 80px 20px;
     }
 
+    .testimonials h3 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
     .testimonial-card {
       background: #fff;
       padding: 30px;
       border-radius: 15px;
-      max-width: 400px;
+      max-width: 600px;
       margin: 20px auto;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 20px;
       transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .testimonial-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      text-align: left;
     }
 
     .testimonial-card:hover {
@@ -215,7 +242,12 @@
         max-width: 90%;
       }
       .testimonial-card {
+        flex-direction: column;
+        text-align: center;
         max-width: 90%;
+      }
+      .testimonial-text {
+        text-align: center;
       }
     }
   </style>
@@ -252,7 +284,7 @@
   </section>
 
   <section class="section product-section" id="product">
-    <img src="https://www.hepatoburn.com/assets/product-image.png" alt="HepatoBurn Bottles">
+    <img src="https://github.com/385-Rafael/vital-health-hub/blob/main/hepatoburn.jpg?raw=true" alt="HepatoBurn Bottles">
     <div>
       <a class="cta-btn" href="https://0ce4fgnaml5r7wf8mnmpya6c2b.hop.clickbank.net/?&traffic_source=facebook&traffic_type=paid">
         Get HepatoBurn Now
@@ -263,10 +295,16 @@
   <section class="testimonials" id="testimonials">
     <h3>Testimonials</h3>
     <div class="testimonial-card">
-      "I've never felt more energetic! HepatoBurn changed my life." - Sarah J.
+      <img src="https://github.com/385-Rafael/vital-health-hub/blob/main/cheerful-blonde-girl-gray-background.jpg?raw=true" alt="Sarah J">
+      <div class="testimonial-text">
+        "I've never felt more energetic! HepatoBurn changed my life." - Sarah J.
+      </div>
     </div>
     <div class="testimonial-card">
-      "Amazing results in just a few weeks!" - Mike P.
+      <img src="https://github.com/385-Rafael/vital-health-hub/blob/main/cheerful-guy-enjoying-outdoor-coffee-break.jpg?raw=true" alt="Mike P">
+      <div class="testimonial-text">
+        "Amazing results in just a few weeks!" - Mike P.
+      </div>
     </div>
   </section>
 
