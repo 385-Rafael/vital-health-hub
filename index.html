@@ -129,6 +129,35 @@
       border-radius: 50%;
       object-fit: cover;
     }
+
+    /* Image Gallery */
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      background: #fff;
+    }
+    .image-gallery img {
+      width: 320px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .image-gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 1000px) {
+      .image-gallery img {
+        width: 90%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -198,6 +227,13 @@
       <img src="https://github.com/385-Rafael/vital-health-hub/blob/main/cheerful-guy-enjoying-outdoor-coffee-break.jpg?raw=true" alt="Mike P.">
       <p>"Amazing results in just a few weeks!" - Mike P.</p>
     </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="image-gallery">
+    <img src="https://github.com/385-Rafael/vital-health-hub/blob/main/hepatoburn-1.jpg?raw=true" alt="Hepatoburn Image 1">
+    <img src="https://github.com/385-Rafael/vital-health-hub/blob/main/hepatoburn-2.jpg?raw=true" alt="Hepatoburn Image 2">
+    <img src="https://github.com/385-Rafael/vital-health-hub/blob/main/hepatoburn-3.jpg?raw=true" alt="Hepatoburn Image 3">
   </section>
 
   <!-- Pixel Events -->
