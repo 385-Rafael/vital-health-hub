@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vital Health - Watch Before It’s Gone</title>
+  <title>Men’s Vitality - Watch Before It’s Gone</title>
   <style>
     body {
       margin: 0;
@@ -14,7 +14,7 @@
 
     /* Hero Section */
     .hero {
-      height: 100vh;
+      min-height: 100vh;
       background: url('https://github.com/385-Rafael/vital-health-hub/blob/main/romantic-scene.png?raw=true') center/cover no-repeat;
       display: flex;
       flex-direction: column;
@@ -24,34 +24,59 @@
       color: white;
       padding: 0 20px;
     }
+
     .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+      font-size: 2.8rem;
+      margin: 0 0 15px 0;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+      max-width: 900px;
     }
+
+    .hero h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 0 0 25px 0;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+      max-width: 700px;
+    }
+
     .hero p {
-      font-size: 1.5rem;
-      margin: 20px 0;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      font-size: 1.2rem;
+      max-width: 750px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
     }
+
     .cta-btn {
       background: #ff4d6d;
       color: white;
-      padding: 15px 30px;
-      border-radius: 30px;
+      padding: 15px 35px;
+      border-radius: 40px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
       display: inline-block;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
+
     .cta-btn:hover {
       background: #e63b5c;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 25px 15px;
+      background: #fafafa;
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .hero p { font-size: 1.2rem; }
+      .hero h1 { font-size: 2rem; }
+      .hero h2 { font-size: 1.1rem; }
+      .hero p { font-size: 1rem; }
     }
   </style>
 </head>
@@ -78,16 +103,22 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Feeling exhausted for no reason?<br>
-      Here’s what’s really happening
-    </h1>
-    <p>Watch this quick video before it’s gone!</p>
+    <h1>Men Over 50 Are Finally Discovering What’s Really Draining Their Energy — And It’s Not What You Think.</h1>
+    <h2>Harvard scientists reveal a surprising connection between prostate health and your daily vitality.</h2>
+    <p>For years, most men have been told that feeling tired, frequent nighttime trips to the bathroom, and low drive are just part of aging.  
+    But now, new research shows the real cause might be something much simpler — and surprisingly easy to fix.</p>
+
     <a id="btnApresentacao" class="cta-btn"
-      href="https://0ce4fgnaml5r7wf8mnmpya6c2b.hop.clickbank.net/?&traffic_source=facebook&traffic_type=paid"
+      href="https://hop.clickbank.net/?affiliate=relj001&vendor=provive&pid=20&tid=relj001"
       target="_blank">
-      ▶ Watch The Video
+      💥 Watch the presentation that’s changing lives across the U.S.
     </a>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    This is an educational presentation for men’s health and vitality. Results may vary.
+  </footer>
 
   <!-- Pixel Event Tracking -->
   <script>
