@@ -10,73 +10,73 @@
       font-family: Arial, sans-serif;
       background: #fff;
       color: #333;
+      overflow: hidden;
     }
 
-    /* Hero Section */
+    /* Fundo visual */
     .hero {
-      min-height: 100vh;
+      height: 100vh;
       background: url('https://github.com/385-Rafael/vital-health-hub/blob/main/romantic-scene.png?raw=true') center/cover no-repeat;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: white;
-      padding: 0 20px;
+      position: relative;
     }
 
-    .hero h1 {
-      font-size: 2.8rem;
-      margin: 0 0 15px 0;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
-      max-width: 900px;
+    /* Pop-up de cookies */
+    .cookie-popup {
+      position: absolute;
+      bottom: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 25px 30px;
+      border-radius: 15px;
+      max-width: 90%;
+      width: 420px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      animation: fadeIn 0.5s ease-in;
     }
 
-    .hero h2 {
-      font-size: 1.4rem;
-      font-weight: 400;
-      margin: 0 0 25px 0;
-      text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
-      max-width: 700px;
+    .cookie-popup h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 750px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+    .cookie-popup p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      line-height: 1.4;
     }
 
-    .cta-btn {
+    .cookie-btns {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .cookie-btn {
       background: #ff4d6d;
       color: white;
-      padding: 15px 35px;
-      border-radius: 40px;
-      text-decoration: none;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
       font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
-      display: inline-block;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: background 0.3s;
     }
 
-    .cta-btn:hover {
+    .cookie-btn:hover {
       background: #e63b5c;
-      transform: scale(1.05);
     }
 
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      padding: 25px 15px;
-      background: #fafafa;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .hero h2 { font-size: 1.1rem; }
-      .hero p { font-size: 1rem; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, 10%); }
+      to { opacity: 1; transform: translate(-50%, 0); }
     }
   </style>
 </head>
@@ -101,29 +101,36 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
-  <!-- Hero Section -->
+  <!-- Hero Background -->
   <section class="hero">
-    <h1>Men Over 50 Are Finally Discovering What’s Really Draining Their Energy — And It’s Not What You Think.</h1>
-    <h2>Harvard scientists reveal a surprising connection between prostate health and your daily vitality.</h2>
-    <p>For years, most men have been told that feeling tired, frequent nighttime trips to the bathroom, and low drive are just part of aging.  
-    But now, new research shows the real cause might be something much simpler — and surprisingly easy to fix.</p>
-
-    <a id="btnApresentacao" class="cta-btn"
-      href="https://hop.clickbank.net/?affiliate=relj001&vendor=provive&pid=20&tid=relj001"
-      target="_blank">
-      💥 Watch the presentation that’s changing lives across the U.S.
-    </a>
+    <div class="cookie-popup" id="cookiePopup">
+      <h2>We value your privacy 🍪</h2>
+      <p>We use cookies to personalize content and improve your experience.<br>
+      Please confirm to continue.</p>
+      <div class="cookie-btns">
+        <button class="cookie-btn" id="acceptCookies">Accept</button>
+        <button class="cookie-btn" id="rejectCookies">Reject</button>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    This is an educational presentation for men’s health and vitality. Results may vary.
-  </footer>
-
-  <!-- Pixel Event Tracking -->
+  <!-- Redirecionamento com delay -->
   <script>
-    document.getElementById('btnApresentacao').addEventListener('click', function() {
+    const redirectURL = "https://hop.clickbank.net/?affiliate=relj001&vendor=provive&pid=20&tid=relj001";
+
+    function redirectWithDelay() {
+      setTimeout(() => {
+        window.location.href = redirectURL;
+      }, 2000); // Delay de 2 segundos
+    }
+
+    document.getElementById('acceptCookies').addEventListener('click', function() {
       fbq('track', 'ViewContent');
+      redirectWithDelay();
+    });
+
+    document.getElementById('rejectCookies').addEventListener('click', function() {
+      redirectWithDelay();
     });
   </script>
 
